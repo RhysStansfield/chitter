@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+  <html>
+  <head>
+    <title>Chitter</title>
+  </head>
+  <header>
+    <h1><a href='/'>Chitter!</a></hi>
+    <h3>We love to sit around and chat Chit!</h3>
+    <% if current_user %>
+      Welcome to Chitter <%= current_user.name %>
+      <nav>
+        <ul>
+          <li>
+            <a href='/add_post'>Add Post</a>
+          </li>
+        </ul>
+      </nav>
+      <% else %>
+      <nav>
+        <ul>
+          <li>
+            <a href='/users/new'>Sign Up!</a>
+          </li>
+        </ul>
+      </nav>
+    <% end %>
+  </header>
+  <body>
+    <%= yield %>
+  </body>
+</html>

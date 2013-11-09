@@ -1,0 +1,6 @@
+<% @posts.each do |post| %>
+  <section>
+    <h3><%= post.user %> posted at <%= post.time %></h3>
+    <p><%= post.body %></p>
+  </section>
+<% end %>
