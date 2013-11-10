@@ -35,7 +35,7 @@ When(/^enter my username and password incorrectly$/) do
 end
 
 Then(/^I should see an error message informing me so$/) do
-  page.should have_content 'The email or password are incorrect'
+  page.should have_content 'The username or password are incorrect'
 end
 
 Given(/^that I have an account and am logged in$/) do

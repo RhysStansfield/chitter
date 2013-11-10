@@ -1,0 +1,7 @@
+<h1><a href='/'>Chitter!</a></hi>
+<h3>We love to chat Chit!</h3>
+<% if current_user %>
+  <%= partial :"partials/nav/signed_in" %>
+<% else %>
+  <%= partial :"partials/nav/signed_out" %>
+<% end %>

@@ -1,0 +1,11 @@
+Welcome to Chitter <%= current_user.name %>
+<nav>
+  <ul>
+    <li>
+      <a href='/add_post'>New Peep</a>
+    </li>
+  </ul>
+</nav>
+<form method='post' action='/sign_out'>
+  <button>Sign Out</button>
+</form>
