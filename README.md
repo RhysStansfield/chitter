@@ -3,6 +3,7 @@ Chitter - Makers Academy Week 6 Assignment
 This is a basic Twitter clone built using Sinatra and postgreSQL
 
 Using DataMapper as the ORM
+
 Using BCrypt to encrypt the passwords
 
 Current functionality -
