@@ -1,10 +1,12 @@
 <% @posts.each do |post| %>
-  <section>
+  <section class='peep'>
     <h3><%= post.user %> @<%= post.username %></h3>
     <p><%= post.body %></p>
-    <form action='/reply' method='post'>
-      <button>Reply</button>
-    </form>
-    <footer>Posted at <%= post.time %></footer>
+    <footer>
+      <p>Posted at <%= post.time %></p>
+      <form action='/reply' method='post'>
+        <button>Reply</button>
+      </form>
+    </footer>
   </section>
 <% end %>

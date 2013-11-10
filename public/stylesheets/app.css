@@ -3,10 +3,65 @@ body {
 }
 
 nav {
-  background-color: #DFF;
+  background-color: #DDF;
+  border-radius: 5px;
+  text-align: left;
+  display: inline-block;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  position: absolute;
+  top: 0px;
+  left: -5px;
+  opacity:1.0;
+}
+
+nav li {
+  display: block;
+  padding: 15px 10px 0 10px;
+  position: relative;
+}
+
+nav button {
+  margin-left: 50px;
+  padding: 5px;
+  border-radius: 2px;
+  background: ;
 }
 
 header {
   margin-top: -10px;
   text-align: center;
+}
+
+#message {
+  margin-top: 60px;
+}
+
+.peep {
+  border: 1px solid #000;
+  margin-bottom: 5px;
+  padding: 5px;
+  background: #FFF;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+}
+
+.peep h3 {
+  text-decoration: underline;
+}
+
+.peep footer p {
+  display: inline-block;
+  font-size: 12px;
+}
+
+.peep footer button {
+  display: inline-block;
+  float: right;
+  position: relative;
+  bottom: 40px;
+  right: 20px;
+  font-size: 15px;
 }
