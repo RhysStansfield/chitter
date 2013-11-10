@@ -1,8 +1,16 @@
 <h2>Sign up for Chitter!</h2>
+<% if flash[:sign_up_errors] && !flash[:sign_up_errors].empty? %>
+<ul id='errors'>
+  <% flash[:sign_up_errors].each do |error| %>
+  <li><%= error %></li>
+<% end %>
+  </ul>
+<% end %>
 <form action='/users' method='post'>
-  Email: <input type='text' name='email'>
+  Email: <input type='text' name='email' value='<%= @user.email%>'>
   Password: <input type='password' name='password'>
-  Name: <input type='text' name='name'>
-  Username: <input type='text' name='username'>
+  Password Confirmation: <input type='password' name='password_confirmation'>
+  Name: <input type='text' name='name' value='<%= @user.name %>'>
+  Username: <input type='text' name='username' value='<%= @user.username %>'>
   <button>Sign Me Up!</button>
 </form>

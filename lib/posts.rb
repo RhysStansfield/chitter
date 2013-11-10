@@ -5,6 +5,7 @@ class Post
   property :id, Serial
   property :body, Text
   property :user, String
-  property :time, String
+  property :username, String
+  property :time, DateTime
 
 end

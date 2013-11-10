@@ -1,5 +1,10 @@
-<h2>Write something cool:</h2>
-<form action='/add_post' method='post'>
-  <input type='textarea' name='message'>
-  <button>Share</button>
-</form>
+<% if session[:user_id] %>
+  <h2>Write something cool:</h2>
+  <form action='/add_post' method='post'>
+    <textarea name='message'></textarea>
+    <button>Share</button>
+  </form>
+<% else %>
+  <h2>Oh dear, you're not signed in!</h2>
+  <p>Please <a href='/session/new'>log in</a> or <a href='/sign_up'>sign up for an account</a> if you want to post to Chitter!</p>
+<% end %>

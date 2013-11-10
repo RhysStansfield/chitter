@@ -30,6 +30,7 @@ Before do
   DatabaseCleaner.start
   Post.create(body: 'Awesome post!',
     user: 'Derp',
+    username: 'Derpy',
     time: Time.now)
   Post.create(body: 'Sahwheat!',
     user: 'Doink',

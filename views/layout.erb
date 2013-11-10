@@ -5,7 +5,7 @@
   </head>
   <header>
     <h1><a href='/'>Chitter!</a></hi>
-    <h3>We love to sit around and chat Chit!</h3>
+    <h3>We love to chat Chit!</h3>
     <% if current_user %>
       Welcome to Chitter <%= current_user.name %>
       <nav>
@@ -15,17 +15,26 @@
           </li>
         </ul>
       </nav>
+      <form method='post' action='/sign_out'>
+        <button>Sign Out</button>
+      </form>
       <% else %>
       <nav>
         <ul>
           <li>
             <a href='/users/new'>Sign Up!</a>
           </li>
+          <li>
+            <a href='/session/new'>Sign In</a>
+          </li>
         </ul>
       </nav>
     <% end %>
   </header>
   <body>
+    <% if flash[:just_logged_out] %>
+      <%= flash[:just_logged_out] %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

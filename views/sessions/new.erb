@@ -1,0 +1,12 @@
+<% if session[:user_id] %>
+  <h2>You are already logged in!</h2>
+  <p>Go and chat Chit rather than hanging around here!</p>
+<% else %>
+  <%= flash[:sign_in_error] %>
+  <h2>Enter your details to sign in</h2>
+  <form action='/session/new' method='post'>
+    <input type='text' name='username'>
+    <input type='password' name='password'>
+    <button>Sign In</button>
+  </form>
+<% end %>
