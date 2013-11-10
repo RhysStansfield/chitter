@@ -5,8 +5,8 @@
   <%= flash[:sign_in_error] %>
   <h2>Enter your details to sign in</h2>
   <form action='/session/new' method='post'>
-    <input type='text' name='username'>
-    <input type='password' name='password'>
+    <input type='text' name='username' placeholder='Username'>
+    <input type='password' name='password' placeholder='Password'>
     <button>Sign In</button>
   </form>
 <% end %>
