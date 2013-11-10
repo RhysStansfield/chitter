@@ -1,6 +1,10 @@
 class Chitter < Sinatra::Base
 
   get '/add_post' do
+    if session[:reply_to]
+      @recipient = session[:reply_to]
+      session[:reply_to] = nil
+    end
     erb :"posts/new"
   end
 

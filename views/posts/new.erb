@@ -1,7 +1,9 @@
 <% if session[:user_id] %>
   <h2>Write something cool:</h2>
   <form action='/add_post' method='post'>
-    <textarea name='message'></textarea>
+    <textarea name='message'><% if @recipient %>Response to <%= @recipient %>:
+      <% end %>
+    </textarea>
     <button>Peep</button>
   </form>
 <% else %>

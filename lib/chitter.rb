@@ -10,6 +10,7 @@ require_relative './models/user'
 require_relative './web/home'
 require_relative './web/new_user'
 require_relative './web/add_post'
+require_relative './web/reply'
 require_relative './web/sign_in'
 require_relative './web/sign_out'
 

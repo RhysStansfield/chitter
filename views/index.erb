@@ -5,6 +5,7 @@
     <footer>
       <p>Posted at <%= post.time %></p>
       <form action='/reply' method='post'>
+        <input type='hidden' name='originalposter' value='<%= post.username %>'>
         <button>Reply</button>
       </form>
     </footer>

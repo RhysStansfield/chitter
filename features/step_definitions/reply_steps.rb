@@ -23,6 +23,12 @@ Given(/^there is a post I want to reply to$/) do
 end
 
 When(/^I click the reply button on a peep and post a response$/) do
-  puts 'SLIME ALERT!'
-  # click_button('Reply').in Post.first
+  page.first(:button, "Reply").click
+  fill_in 'message', with: 'Response to Gark: Awesome reply'
+  click_button 'Peep'
+end
+
+Then(/^I should see my reply on the homepage$/) do
+  expect(current_path).to eq '/'
+  page.should have_content 'Response to Gark: Awesome reply'
 end
