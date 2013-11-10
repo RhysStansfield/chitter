@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'sinatra/partial'
 require 'rack-flash'
 
 require_relative 'posts'
@@ -10,6 +11,7 @@ class Chitter < Sinatra::Base
   helpers UserUtils
 
   use Rack::Flash
+  register Sinatra::Partial
 
   enable :sessions
   set :session_secret, 'supersecretyness'

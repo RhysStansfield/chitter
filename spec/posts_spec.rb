@@ -6,6 +6,7 @@ describe Post do
     User.create({
           email: 'bar@foo.com',
           password: 'passy',
+          password_confirmation: 'passy',
           name: 'Rumple',
           username: 'Derp'
           })
@@ -28,7 +29,7 @@ describe Post do
   end
 
   it 'has a timestamp' do
-    expect(post.time).to be_a_kind_of String
+    expect(post.time).to be_a_kind_of DateTime
   end
 
 end

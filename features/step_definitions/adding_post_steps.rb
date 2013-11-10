@@ -14,14 +14,14 @@ Given(/^am logged in$/) do
 end
 
 When(/^I click the Add Post button$/) do
-  click_link 'Add Post'
+  click_link 'New Peep'
   expect(current_path).to eq '/add_post'
 end
 
 When(/^write a post and click Post$/) do
   expect(Post.count).to eq 2
   fill_in 'message', with: 'A new post, cool!'
-  click_button 'Share'
+  click_button 'Peep'
   expect(Post.count).to eq 3
 end
 

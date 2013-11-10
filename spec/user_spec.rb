@@ -8,10 +8,12 @@ describe User do
       User.create(
         email: 'bar@foo.com',
         password: 'passy',
+        password_confirmation: 'passy',
         name: 'Rumple',
         username: 'Derp',
         posts: [Post.create(body: 'Awesome post!',
           user: 'Derp',
+          username: 'Diddly',
           time: Time.now
           )]
         )

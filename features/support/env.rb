@@ -34,6 +34,7 @@ Before do
     time: Time.now)
   Post.create(body: 'Sahwheat!',
     user: 'Doink',
+    username: 'Blargh',
     time: Time.now)
 end
 

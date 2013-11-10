@@ -2,6 +2,9 @@
   <section>
     <h3><%= post.user %> @<%= post.username %></h3>
     <p><%= post.body %></p>
+    <form action='/reply' method='post'>
+      <button>Reply</button>
+    </form>
     <footer>Posted at <%= post.time %></footer>
   </section>
 <% end %>
