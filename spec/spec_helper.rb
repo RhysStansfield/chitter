@@ -7,7 +7,7 @@
 ENV["RACK_ENV"] = 'test'
 
 require 'database_cleaner'
-require './server'
+require './lib/server'
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true

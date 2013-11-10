@@ -1,5 +1,5 @@
 require 'data_mapper'
-require './server'
+require './lib/server'
 
 task :auto_upgrade do
   DataMapper.auto_upgrade!
